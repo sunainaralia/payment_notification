@@ -44,8 +44,8 @@ INSTALLED_APPS += ["payments", "django_celery_beat"]
 # CELERY_BROKER_URL = "redis://localhost:6379/0"
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
-CELERY_BROKER_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
-
+CELERY_BROKER_URL =  "redis://red-ctml0v3tq21c73f9lqdg:6379"
+CELERY_RESULT_BACKEND = "redis://red-ctml0v3tq21c73f9lqdg:6379"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
